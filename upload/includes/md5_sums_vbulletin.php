@@ -507,8 +507,8 @@ $md5_sums = array(
 		'upgrade_language_en.php' => '5a24f395230c91d745b49c2bb8a288b4',
 		'upgradecore.php' => '2bbce96885bdc3480f7af557c9e5de92',
 		'vbulletin-adminhelp.xml' => 'f9ecb9d8abc3e48c5091c79d893a0b1e',
-		'vbulletin-language.xml' => '9c46fcfee3eda1b268954dab13d7b815',
-		'vbulletin-settings.xml' => 'efcf345e860ed701addc9c57a3d6548b',
+		'vbulletin-language.xml' => 'b663afa5dad19f19d8f60a076cb25b5a',
+		'vbulletin-settings.xml' => 'c928a4c67624e58a6accf60e37bde915',
 		'vbulletin-style.xml' => 'fae67b89a42180ca9a3add15bb2486d3',
 	),
 	'/modcp' => array(

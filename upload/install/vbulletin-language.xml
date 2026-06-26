@@ -5193,7 +5193,7 @@ To start viewing messages, select the forum that you want to visit from the sele
 		<phrase name="posted_by"><![CDATA[Posted By]]></phrase>
 		<phrase name="posting_rules"><![CDATA[Posting Rules]]></phrase>
 		<phrase name="posts"><![CDATA[Posts]]></phrase>
-		<phrase name="powered_by_vbulletin" date="1163500480" username="vBulletin Solutions" version="3.6.4"><![CDATA[]]></phrase>
+		<phrase name="powered_by_vbulletin" date="1163500480" username="vBulletin Solutions" version="3.6.4"><![CDATA[Powered by vBulletin&reg; Version {1}<br />Copyright &copy;2000 - {2}, vBulletin Solutions Inc.]]></phrase>
 		<phrase name="prev"><![CDATA[Prev]]></phrase>
 		<phrase name="prev_page"><![CDATA[Prev Page]]></phrase>
 		<phrase name="prev_picture_short" date="1265284670" username="vBulletin Solutions" version="3.8.5"><![CDATA[Prev]]></phrase>
@@ -5362,7 +5362,7 @@ To start viewing messages, select the forum that you want to visit from the sele
 		<phrase name="username"><![CDATA[User Name]]></phrase>
 		<phrase name="valid_file_extensions"><![CDATA[Valid file extensions]]></phrase>
 		<phrase name="vbulletin_copyright" date="1162556078" username="vBulletin Solutions" version="3.6.3"><![CDATA[vBulletin&reg; v{1}, Copyright &copy;2000-{2}, vBulletin Solutions Inc.]]></phrase>
-		<phrase name="vbulletin_message" date="1163500549" username="vBulletin Solutions" version="3.6.4"><![CDATA[Message]]></phrase>
+		<phrase name="vbulletin_message" date="1163500549" username="vBulletin Solutions" version="3.6.4"><![CDATA[vBulletin Message]]></phrase>
 		<phrase name="view"><![CDATA[View]]></phrase>
 		<phrase name="view_all_announcements"><![CDATA[View All Announcements]]></phrase>
 		<phrase name="view_all_subscribed_threads"><![CDATA[View all Subscribed Threads]]></phrase>
@@ -5406,7 +5406,7 @@ To start viewing messages, select the forum that you want to visit from the sele
 		<phrase name="x_members_and_y_guests"><![CDATA[{1} members and {2} guests]]></phrase>
 		<phrase name="x_minutes_ago"><![CDATA[{1} Minutes Ago]]></phrase>
 		<phrase name="x_of_y" date="1219941481" username="vBulletin Solutions" version="3.8.0 Alpha 1"><![CDATA[{1} of {2}]]></phrase>
-		<phrase name="x_powered_by_vbulletin" date="1163500505" username="vBulletin Solutions" version="3.6.4"><![CDATA[{1}]]></phrase>
+		<phrase name="x_powered_by_vbulletin" date="1163500505" username="vBulletin Solutions" version="3.6.4"><![CDATA[{1} - Powered by vBulletin]]></phrase>
 		<phrase name="x_statistics"><![CDATA[{1} Statistics]]></phrase>
 		<phrase name="x_viewing"><![CDATA[{1} Viewing]]></phrase>
 		<phrase name="x_weeks_ago"><![CDATA[{1} Weeks Ago]]></phrase>

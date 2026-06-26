@@ -246,11 +246,11 @@ Registration Problem</defaultvalue>
 	<settinggroup name="general" displayorder="30" product="vbulletin">
 		<setting varname="keywords" displayorder="10">
 			<datatype>free</datatype>
-			<defaultvalue><![CDATA[forum,bbs,discussion,bulletin board]]></defaultvalue>
+			<defaultvalue><![CDATA[vbulletin,vBulletin Solutions,forum,bbs,discussion,bulletin board]]></defaultvalue>
 		</setting>
 		<setting varname="description" displayorder="20">
 			<datatype>free</datatype>
-			<defaultvalue><![CDATA[This is a discussion forum.]]></defaultvalue>
+			<defaultvalue><![CDATA[This is a discussion forum powered by vBulletin. To find out about vBulletin, go to https://www.vbulletin.com/ .]]></defaultvalue>
 		</setting>
 		<setting varname="useforumjump" displayorder="40">
 			<datatype>boolean</datatype>
