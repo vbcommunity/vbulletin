@@ -1,7 +1,7 @@
 <?php
 /*======================================================================*\
 || #################################################################### ||
-|| # vBulletin 3.8.11 - Licence Number VBS4AAFB47
+|| # vBulletin 3.8 - Community Edition
 || # ---------------------------------------------------------------- # ||
 || # Copyright ©2000–2023 vBulletin Solutions Inc. All Rights Reserved. ||
 || # This file may not be redistributed in whole or significant part. # ||
@@ -15,21 +15,6 @@ error_reporting(E_ALL & ~E_NOTICE);
 define('VERSION', '3.8.11');
 define('THIS_SCRIPT', 'tools.php');
 define('VB_AREA', 'tools');
-
-if (strlen('b54d2f30c39510935e812b415f989a5d') == 32)
-{
-	/**
-	* @ignore
-	*/
-	define('CUSTOMER_NUMBER', 'b54d2f30c39510935e812b415f989a5d');
-}
-else
-{
-	/**
-	* @ignore
-	*/
-	define('CUSTOMER_NUMBER', md5(strtoupper('b54d2f30c39510935e812b415f989a5d')));
-}
 
 if (file_exists('./../includes/init.php'))
 { // need to go up a single directory, we must be in includes / admincp / modcp / install
@@ -52,92 +37,6 @@ if ($datastore_class != 'vB_Datastore')
 }
 $vbulletin->datastore = new $datastore_class($vbulletin, $db);
 $vbulletin->datastore->fetch($specialtemplates);
-
-$type = $vbulletin->input->clean_gpc('r', 'type', TYPE_STR);
-$customerid = $vbulletin->input->clean_gpc('p', 'customerid', TYPE_STR);
-$bbcustomerid = $vbulletin->input->clean_gpc('c', 'bbcustomerid', TYPE_STR);
-
-// #############################################################################
-if ($_POST['do'] == 'login')
-{
-	if (md5(strtoupper($vbulletin->GPC['customerid'])) == CUSTOMER_NUMBER)
-	{
-		setcookie('bbcustomerid', md5(strtoupper($vbulletin->GPC['customerid'])), 0, '/', '');
-		$vbulletin->GPC['bbcustomerid'] = CUSTOMER_NUMBER;
-		$_REQUEST['do'] = '';
-	}
-}
-
-// #############################################################################
-if ($vbulletin->GPC['bbcustomerid'] !== CUSTOMER_NUMBER)
-{
-	global $stylevar;
-
-	// set the style folder
-	if (empty($vbulletin->options['cpstylefolder']))
-	{
-		$vbulletin->options['cpstylefolder'] = 'vBulletin_3_Silver';
-	}
-	// set the forumhome script
-	if (empty($vbulletin->options['forumhome']))
-	{
-		$vbulletin->options['forumhome'] = 'index';
-	}
-	// set the version
-	$vbulletin->options['templateversion'] = VERSION;
-
-	define('NO_PAGE_TITLE', true);
-	print_cp_header('Tools');
-
-	?>
-	<form action="<?php echo THIS_SCRIPT; ?>?do=login" method="post">
-	<input type="hidden" name="do" value="login" />
-	<p>&nbsp;</p><p>&nbsp;</p>
-	<table class="tborder" cellpadding="0" cellspacing="0" border="0" width="450" align="center"><tr><td>
-
-		<!-- header -->
-		<div class="tcat" style="padding:4px; text-align:center"><b>Enter Customer Number</b></div>
-		<!-- /header -->
-
-		<!-- logo and version -->
-		<table cellpadding="4" cellspacing="0" border="0" width="100%" class="navbody">
-		<tr valign="bottom">
-			<td><img src="../cpstyles/<?php echo $vbulletin->options['cpstylefolder']; ?>/cp_logo.gif" alt="" border="0" /></td>
-			<td>
-				<b><a href="../<?php echo $vbulletin->options['forumhome']; ?>.php"><?php echo $vbulletin->options['bbtitle']; ?></a></b><br />
-				<?php echo 'vBulletin ' . $vbulletin->options['templateversion'] . ' Tools'; ?><br />
-				&nbsp;
-			</td>
-		</tr>
-		</table>
-		<!-- /logo and version -->
-
-		<table cellpadding="4" cellspacing="0" border="0" width="100%" class="logincontrols">
-		<col width="50%" style="text-align:right; white-space:nowrap"></col>
-		<col></col>
-		<col width="50%"></col>
-		<!-- login fields -->
-		<tr valign="top">
-			<td>&nbsp;<br />Customer Number<br />&nbsp;</td>
-			<td class="smallfont"><input type="text" style="padding-left:5px; font-weight:bold; width:250px" name="customerid" value="" tabindex="1" /><br />This is the number with which you log in to the vBulletin.com Members' Area</td>
-			<td>&nbsp;</td>
-		</tr>
-		<!-- /login fields -->
-		<!-- submit row -->
-		<tr>
-			<td colspan="3" align="center">
-				<input type="submit" class="button" value="Enter Tools System" accesskey="s" tabindex="3" />
-			</td>
-		</tr>
-		<!-- /submit row -->
-		</table>
-	</td></tr></table>
-	</form>
-	<?php
-
-	unset($debug, $GLOBALS['DEVDEBUG']);
-	print_cp_footer();
-}
 
 #####################################
 # phrases for import systems
@@ -652,10 +551,5 @@ if (defined('SCRIPT_REDIRECT'))
 </html>
 <?php
 
-/*======================================================================*\
-|| ####################################################################
-|| # Downloaded: 23:08, Mon Jul 17th 2023 : $Revision: 92875 $
-|| # $Date: 2017-02-11 09:03:44 -0800 (Sat, 11 Feb 2017) $
-|| ####################################################################
-\*======================================================================*/
+
 ?>

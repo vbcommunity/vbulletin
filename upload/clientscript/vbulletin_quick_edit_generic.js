@@ -1,6 +1,6 @@
 /*======================================================================*\
 || #################################################################### ||
-|| # vBulletin 3.8.11
+|| # vBulletin 3.8
 || # ---------------------------------------------------------------- # ||
 || # Copyright ©2000-2023 vBulletin Solutions Inc. All Rights Reserved. ||
 || # This file may not be redistributed in whole or significant part. # ||

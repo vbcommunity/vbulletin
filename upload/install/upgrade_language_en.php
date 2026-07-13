@@ -1,7 +1,7 @@
 <?php
 /*======================================================================*\
 || #################################################################### ||
-|| # vBulletin 3.8.11 - Licence Number VBS4AAFB47
+|| # vBulletin 3.8 - Community Edition
 || # ---------------------------------------------------------------- # ||
 || # Copyright ©2000-2023 vBulletin Solutions Inc. All Rights Reserved. ||
 || # This file may not be redistributed in whole or significant part. # ||
@@ -1298,10 +1298,4 @@ $upgrade_phrases['finalupgrade.php']['upgrade_version_mismatch'] = '<p>Your vBul
 		<p>This generally means your upgrade was not successful. Please ensure that you have uploaded the latest files and <a href="upgrade.php">click here</a> to try again.</p>
 		<p>If you are sure you wish to continue with this part of the upgrade, <a href="finalupgrade.php?step=1">click here</a>.</p>';
 
-/*======================================================================*\
-|| ####################################################################
-|| # Downloaded: 23:08, Mon Jul 17th 2023 : $Revision: 93992 $
-|| # $Date: 2017-05-10 05:18:19 -0700 (Wed, 10 May 2017) $
-|| ####################################################################
-\*======================================================================*/
 ?>

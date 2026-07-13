@@ -1,7 +1,7 @@
 <?php
 /*======================================================================*\
 || #################################################################### ||
-|| # vBulletin 3.8.11 - Licence Number VBS4AAFB47
+|| # vBulletin 3.8 - Community Edition
 || # ---------------------------------------------------------------- # ||
 || # Copyright ©2000-2023 vBulletin Solutions Inc. All Rights Reserved. ||
 || # This file may not be redistributed in whole or significant part. # ||
@@ -912,10 +912,4 @@ $navbits = construct_navbits(array('' => $vbphrase['user_control_panel']));
 eval('$navbar = "' . fetch_template('navbar') . '";');
 eval('print_output("' . fetch_template('USERCP_SHELL') . '");');
 
-/*======================================================================*\
-|| ####################################################################
-|| # Downloaded: 23:08, Mon Jul 17th 2023 : $Revision: 92958 $
-|| # $Date: 2017-02-16 19:57:42 -0800 (Thu, 16 Feb 2017) $
-|| ####################################################################
-\*======================================================================*/
 ?>

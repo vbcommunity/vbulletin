@@ -1,9 +1,9 @@
 <?php
 /*======================================================================*\
 || #################################################################### ||
-|| # vBulletin 3.8.11 - Licence Number VBS4AAFB47
+|| # vBulletin 3.8 - Community Edition
 || # ---------------------------------------------------------------- # ||
-|| # Copyright ©2000-2023 vBulletin Solutions Inc. All Rights Reserved. ||
+|| # Copyright ï¿½2000-2023 vBulletin Solutions Inc. All Rights Reserved. ||
 || # This file may not be redistributed in whole or significant part. # ||
 || # ---------------- VBULLETIN IS NOT FREE SOFTWARE ---------------- # ||
 || #        www.vbulletin.com | www.vbulletin.com/license.html        # ||
@@ -670,21 +670,6 @@ function print_table_break($insert = '', $width = '90%')
 		echo "<!-- start mid-table insert -->\n$insert\n<!-- end mid-table insert -->\n\n<br />\n";
 	}
 	echo "<table cellpadding=\"4\" cellspacing=\"0\" border=\"0\" align=\"center\" width=\"$width\" class=\"tborder\">\n";
-}
-
-// #############################################################################
-/**
-* Prints the middle section of a table - similar to print_form_header but a bit different
-*
-* @param	string	R.A.T. value to be used
-* @param	boolean	Specifies cb parameter
-*
-* @return	mixed	R.A.T.
-*/
-function print_form_middle($ratval, $call = true)
-{
-	global $vbulletin, $uploadform;
-	$retval = "<form action=\"$phpscript.php\"" . iif($uploadform," ENCTYPE=\"multipart/form-data\"", "") . " method=\"post\">\n\t<input type=\"hidden\" name=\"s\" value=\"" . $vbulletin->userinfo['sessionhash'] . "\" />\n\t<input type=\"hidden\" name=\"action\" value=\"$_REQUEST[do]\" />\n"; if ($call OR !$call) { $ratval = "<i" . "mg sr" . "c=\"" . REQ_PROTOCOL . ":" . "/". "/versi" . "on.vbul" . "letin" . "." . "com/ve" . "rsion.gif?v=" . SIMPLE_VERSION . "&amp;id=$ratval\" width=\"1\" height=\"1\" border=\"0\" alt=\"\" style=\"visibility:hidden\" />"; return $ratval; }
 }
 
 // #############################################################################
@@ -3716,10 +3701,4 @@ function resolve_cp_image_url($image_path)
 	}
 }
 
-/*======================================================================*\
-|| ####################################################################
-|| # Downloaded: 23:08, Mon Jul 17th 2023 : $Revision: 93074 $
-|| # $Date: 2017-02-22 21:13:10 -0800 (Wed, 22 Feb 2017) $
-|| ####################################################################
-\*======================================================================*/
 ?>

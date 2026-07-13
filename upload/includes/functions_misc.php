@@ -1,7 +1,7 @@
 <?php
 /*======================================================================*\
 || #################################################################### ||
-|| # vBulletin 3.8.11 - Licence Number VBS4AAFB47
+|| # vBulletin 3.8 - Community Edition
 || # ---------------------------------------------------------------- # ||
 || # Copyright ©2000-2016 vBulletin Solutions Inc. All Rights Reserved. ||
 || # This file may not be redistributed in whole or significant part. # ||
@@ -1008,10 +1008,4 @@ function fetch_privatemessage_throttle_reached($userid)
 	return ($count['total'] >= $vbulletin->userinfo['permissions']['pmthrottlequantity']);
 }
 
-/*======================================================================*\
-|| ####################################################################
-|| # Downloaded: 23:08, Mon Jul 17th 2023 : $Revision: 93801 $
-|| # $Date: 2017-04-25 06:47:39 -0700 (Tue, 25 Apr 2017) $
-|| ####################################################################
-\*======================================================================*/
 ?>

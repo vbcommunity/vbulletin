@@ -1,9 +1,9 @@
 <?php
 /*======================================================================*\
 || #################################################################### ||
-|| # vBulletin 3.8.11 - Licence Number VBS4AAFB47
+|| # vBulletin 3.8 - Community Edition
 || # ---------------------------------------------------------------- # ||
-|| # Copyright ©2000-2023 vBulletin Solutions Inc. All Rights Reserved. ||
+|| # Copyright ï¿½2000-2023 vBulletin Solutions Inc. All Rights Reserved. ||
 || # This file may not be redistributed in whole or significant part. # ||
 || # ---------------- VBULLETIN IS NOT FREE SOFTWARE ---------------- # ||
 || #        www.vbulletin.com | www.vbulletin.com/license.html        # ||
@@ -164,7 +164,7 @@ if ($_POST['do'] == 'notes')
 // ################################# HEADER FRAME ##############################
 // #############################################################################
 
-$versionhost = REQ_PROTOCOL . '://version.vbulletin.com';
+$versionhost = 'https://vbcommunity.github.io/vbulletin';
 
 if ($_REQUEST['do'] == 'head')
 {
@@ -176,8 +176,8 @@ if ($_REQUEST['do'] == 'head')
 	?>
 	<table border="0" width="100%" height="100%">
 	<tr align="center" valign="top">
-		<td style="text-align:<?php echo $stylevar['left']; ?>"><a href="https://www.vbulletin.com/" target="_blank"><b><?php echo $vbphrase['admin_control_panel']; ?></b> (vBulletin <?php echo ADMIN_VERSION_VBULLETIN . print_form_middle('VBS4AAFB47'); ?>)<?php echo iif(is_demo_mode(), ' <b>DEMO MODE</b>'); ?></a></td>
-		<td><a href="https://members.vbulletin.com/" id="head_version_link" target="_blank">&nbsp;</a></td>
+		<td style="text-align:<?php echo $stylevar['left']; ?>"><a href="https://github.com/vbcommunity/vbulletin" target="_blank"><b><?php echo $vbphrase['admin_control_panel']; ?></b> (vBulletin <?php echo ADMIN_VERSION_VBULLETIN; ?>)<?php echo iif(is_demo_mode(), ' <b>DEMO MODE</b>'); ?></a></td>
+		<td><a href="https://github.com/vbcommunity/vbulletin/releases" id="head_version_link" target="_blank">&nbsp;</a></td>
 		<td style="white-space:nowrap; text-align:<?php echo $stylevar['right']; ?>; font-weight:bold">
 			<a href="../<?php echo $vbulletin->options['forumhome']; ?>.php<?php echo $vbulletin->session->vars['sessionurl_q']; ?>" target="_blank"><?php echo $vbphrase['forum_home_page']; ?></a>
 			|
@@ -185,7 +185,7 @@ if ($_REQUEST['do'] == 'head')
 		</td>
 	</tr>
 	</table>
-	<script type="text/javascript" src="<?php echo $versionhost; ?>/version.js?v=<?php echo SIMPLE_VERSION; ?>&amp;id=VBS4AAFB47"></script>
+	<script type="text/javascript" src="<?php echo $versionhost; ?>/version.js?v=<?php echo SIMPLE_VERSION; ?>"></script>
 	<script type="text/javascript">
 	<!--
 	fetch_object('head_version_link').innerHTML = construct_phrase('<?php echo $vbphrase['latest_version_available_x']; ?>', ((typeof(vb_version) == 'undefined' || vb_version == '') ? '<?php echo $vbphrase['n_a']; ?>' : vb_version));
@@ -312,7 +312,7 @@ if ($_REQUEST['do'] == 'nav')
 	print_cp_header();
 
 	echo "\n<div>";
-	?><img src="../cpstyles/<?php echo $vbulletin->options['cpstylefolder']; ?>/cp_logo.gif" title="<?php echo $vbphrase['admin_control_panel']; ?>" alt="" border="0" hspace="4" <?php $df = print_form_middle("VBS4AAFB47"); ?> vspace="4" /><?php
+	?><img src="../cpstyles/<?php echo $vbulletin->options['cpstylefolder']; ?>/cp_logo.gif" title="<?php echo $vbphrase['admin_control_panel']; ?>" alt="" border="0" hspace="4" vspace="4" /><?php
 	echo "</div>\n\n" . iif(is_demo_mode(), "<div align=\"center\"><b>DEMO MODE</b></div>\n\n") . "<div style=\"width:168px; padding: 4px\">\n";
 
 	// cache nav prefs
@@ -1041,7 +1041,7 @@ if (typeof(vb_version) != "undefined")
 	var this_vb_version = "<?php echo ADMIN_VERSION_VBULLETIN; ?>";
 	if (isNewerVersion(this_vb_version, vb_version))
 	{
-		document.writeln('<a href="https://www.vbulletin.com/forum/node/' + vb_announcementid + '" target="_blank">' + construct_phrase(latest_string, vb_version) + '</a><br />' + construct_phrase(current_string, this_vb_version.bold()));
+		document.writeln('<a href="' + vb_releaseurl + '" target="_blank">' + construct_phrase(latest_string, vb_version) + '</a><br />' + construct_phrase(current_string, this_vb_version.bold()));
 	}
 	else
 	{
@@ -1078,7 +1078,7 @@ var local_extension = '.php';
 //-->
 </script>
 <script type="text/javascript" src="<?php echo $versionhost; ?>/versioncheck.js?v=<?php echo SIMPLE_VERSION; ?>"></script>
-<script type="text/javascript" src="<?php echo $versionhost; ?>/version.js?v=<?php echo SIMPLE_VERSION; ?>&amp;id=VBS4AAFB47"></script>
+<script type="text/javascript" src="<?php echo $versionhost; ?>/version.js?v=<?php echo SIMPLE_VERSION; ?>"></script>
 <script type="text/javascript" src="../clientscript/vbulletin_cphome_scripts.js?v=<?php echo SIMPLE_VERSION; ?>"></script>
 <?php
 
@@ -1230,10 +1230,4 @@ if ($_POST['do'] == 'handlemessage')
 	print_cp_redirect('index.php?do=home' . $vbulletin->session->vars['sessionurl_js']);
 }
 
-/*======================================================================*\
-|| ####################################################################
-|| # Downloaded: 23:08, Mon Jul 17th 2023 : $Revision: 93382 $
-|| # $Date: 2017-03-15 19:31:14 -0700 (Wed, 15 Mar 2017) $
-|| ####################################################################
-\*======================================================================*/
 ?>

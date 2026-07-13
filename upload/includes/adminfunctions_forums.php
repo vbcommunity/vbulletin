@@ -1,7 +1,7 @@
 <?php
 /*======================================================================*\
 || #################################################################### ||
-|| # vBulletin 3.8.11 - Licence Number VBS4AAFB47
+|| # vBulletin 3.8 - Community Edition
 || # ---------------------------------------------------------------- # ||
 || # Copyright ©2000-2023 vBulletin Solutions Inc. All Rights Reserved. ||
 || # This file may not be redistributed in whole or significant part. # ||
@@ -194,10 +194,4 @@ function print_forum_permission_rows($customword, $forumpermission = array(), $e
 	($hook = vBulletinHook::fetch_hook('admin_fperms_form')) ? eval($hook) : false;
 }
 
-/*======================================================================*\
-|| ####################################################################
-|| # Downloaded: 23:08, Mon Jul 17th 2023 : $Revision: 92875 $
-|| # $Date: 2017-02-11 09:03:44 -0800 (Sat, 11 Feb 2017) $
-|| ####################################################################
-\*======================================================================*/
 ?>

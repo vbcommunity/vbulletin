@@ -1,7 +1,7 @@
 <?php
 /*======================================================================*\
 || #################################################################### ||
-|| # vBulletin 3.8.11 - Licence Number VBS4AAFB47
+|| # vBulletin 3.8 - Community Edition
 || # ---------------------------------------------------------------- # ||
 || # Copyright ©2000-2023 vBulletin Solutions Inc. All Rights Reserved. ||
 || # This file may not be redistributed in whole or significant part. # ||
@@ -138,7 +138,7 @@ if ($_REQUEST['do'] == 'choose')
 	print_form_header('backup', 'sqlfile');
 	print_table_header($vbphrase['backup_database_to_a_file_on_the_server']);
 	print_description_row($vbphrase['backup_file_warning']);
-	print_input_row($vbphrase['path_and_file_to_save_backup_to'], 'filename', './forumbackup-' . vbdate(str_replace(array('\\', '/', ' '), '', $vbulletin->options['dateformat']), TIMENOW) . '-' . substr(md5('VBS4AAFB47' . TIMENOW), 0, 5) . '.sql', 0, 60);
+	print_input_row($vbphrase['path_and_file_to_save_backup_to'], 'filename', './forumbackup-' . vbdate(str_replace(array('\\', '/', ' '), '', $vbulletin->options['dateformat']), TIMENOW) . '-' . bin2hex(random_bytes(3)) . '.sql', 0, 60);
 	print_submit_row($vbphrase['save']);
 
 	print_form_header('backup', 'csvtable');
@@ -204,10 +204,4 @@ if ($_POST['do'] == 'sqlfile')
 
 print_cp_footer();
 
-/*======================================================================*\
-|| ####################################################################
-|| # Downloaded: 23:08, Mon Jul 17th 2023 : $Revision: 92875 $
-|| # $Date: 2017-02-11 09:03:44 -0800 (Sat, 11 Feb 2017) $
-|| ####################################################################
-\*======================================================================*/
 ?>

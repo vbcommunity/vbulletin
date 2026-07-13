@@ -1,0 +1,72 @@
+name: Deploy version checker to GitHub Pages
+
+on:
+  release:
+    types: [published]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Get latest release
+        id: release
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const release = await github.rest.repos.getLatestRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+
+            const version = release.data.tag_name.replace(
+              /-patch-level-(\d+)$/i,
+              ' Patch Level $1'
+            );
+
+            core.setOutput('version', version);
+            core.setOutput('url', release.data.html_url);
+
+      - name: Generate version.js
+        run: |
+          cat > .github/pages/version.js << EOF
+          // ############################# //
+          // # vBulletin Version Checker # //
+          // ############################# //
+
+          // Latest Stable Version //
+          var vb_version = '${{ steps.release.outputs.version }}';
+
+          // Latest Stable Release //
+          var vb_releaseurl = '${{ steps.release.outputs.url }}';
+          EOF
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: .github/pages
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
